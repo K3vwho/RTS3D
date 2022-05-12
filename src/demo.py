@@ -5,7 +5,7 @@ from __future__ import print_function
 import _init_paths
 
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 from detectors.RTS3D_infer import RTS3DDetector
 from opts import opts
 import shutil
@@ -33,7 +33,7 @@ def demo(opt):
           with open(opt.demo,'r') as f:
               lines = f.readlines()
           ls = os.listdir(opt.mono_path)
-          image_l_names=[os.path.join(opt.data_dir+'/kitti/image/',img[:6]+'.png') for img in ls]
+          image_l_names=[os.path.join(opt.data_dir+'/kitti/image/', img[:6]+'.png') for img in ls]
           image_r_names = [os.path.join(opt.data_dir + '/kitti/image/', "{:06d}".format(int(float(img[:6])+7481))+'.png') for img in ls]
           mono_est= [os.path.join(opt.mono_path,img[:6]+'.txt') for img in ls]
       else:
@@ -49,6 +49,7 @@ def demo(opt):
           time_str = time_str + '{} {:.3f}s |'.format(stat, ret[stat])
       time_str=time_str+'{} {:.3f}s |'.format('tol', time_tol/num)
       print(time_str)
+
 if __name__ == '__main__':
     opt = opts().init()
     demo(opt)

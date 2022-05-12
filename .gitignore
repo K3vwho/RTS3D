@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# KITTI data
+kitti_format/data
+
+# Docker
+rts3d_version_2.tar
+
 # C extensions
 *.so
 

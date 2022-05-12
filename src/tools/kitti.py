@@ -8,7 +8,7 @@ import numpy as np
 import cv2
 
 DATA_PATH = '/freespace/kitti_format/data/kitti/'
-DATA_PATH = '/home/lipeixuan/3ddetectionkitti/kitti_format/data/kitti/'
+DATA_PATH = '/home/object_detection/RTS3D/kitti_format/data/kitti/'
 DEBUG = False
 # VAL_PATH = DATA_PATH + 'training/label_val/'
 import os

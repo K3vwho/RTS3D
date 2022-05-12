@@ -1,6 +1,6 @@
 import time
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
+os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 import fire
 import kitti_common as kitti
 from eval import get_official_eval_result, get_coco_eval_result
